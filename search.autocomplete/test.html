@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>自定义搜索补全功能插件</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src='jquery.autocomplete.js'></script>
+  <script>
+  $( function() {
+    new Autocomplete().init('#tags','test.json','test.json',function(data){
+		console.log(data);
+	});
+	new Autocomplete().init('#tags1','test.json','test.json',function(data){
+		console.log(data);
+	});
+  } );
+  </script>
+  <style type="text/css">
+	.ui-widget{
+		margin:0 auto;
+		width:400px;
+		background-color:red;
+	}
+  </style>
+</head>
+<body>
+<div class="ui-widget">
+  <label for="tags">Tags: </label>
+  <input id="tags" />
+  <input id="tags1" />
+</div>
+</body>
+</html>
